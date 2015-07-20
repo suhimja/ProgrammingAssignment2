@@ -4,8 +4,9 @@
 # 3. cacheSolve(mat)
 
 ## OR to make it more interessting, try the test function.
-# 1. define mat as a matrix
-# 2. test(mat)
+# > r = rnorm(1000000)
+# > mat2 = matrix(r, nrow=1000, ncol=1000)
+# > test(mat1)
 
 
 # i have changes the names f set and getmeans to set and getmat
@@ -13,11 +14,11 @@
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
-  set <- function(y) {
+  set <- function(y) { # take a matrix as input and sets the matrix
     x <<- y
     m <<- NULL
   }
-  get <- function() x
+  get <- function() x # prints out the content of the matrix set
   setmat <- function(solve) m <<- solve
   getmat <- function() m
   list(set = set, get = get,
